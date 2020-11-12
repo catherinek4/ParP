@@ -25,7 +25,7 @@ def get_file_content(file_path):
         return content
 
 
-# create_input_files(1000)
+create_input_files(1000)
 
 
 # створюємо нові файли в папці rewritten_files
