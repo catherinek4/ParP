@@ -58,11 +58,5 @@ if __name__ == '__main__':
           time.time() - start, 'c.')
 
     start = time.time()
-    with Pool(8) as p:
-        p.map(write_one_file, range(1000))
-    print('Час виконання ф-ції паралельно за допомогою процесів Pool: ',
-          time.time() - start, 'c.')
-
-    start = time.time()
     rewrite_files(1000)
     print('Час виконання ф-ції послідовно: ', time.time() - start, 'c.')
