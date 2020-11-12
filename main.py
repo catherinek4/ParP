@@ -45,14 +45,14 @@ if __name__ == '__main__':
 
     start = time.time()
     with tpe(8) as executor:
-        executor.map(write_files, range(1000))
+        executor.map(write_one_file, range(1000))
 
     print('Час виконання ф-ції паралельно за допомогою потоків ThreadPoolExecutor: ',
           time.time() - start, 'c.')
 
     start = time.time()
     with ppe(8) as executor:
-        executor.map(write_files, range(1000))
+        executor.map(write_one_file, range(1000))
 
     print('Час виконання ф-ції паралельно за допомогою процесів ProcessPoolExecutor: ',
           time.time() - start, 'c.')
